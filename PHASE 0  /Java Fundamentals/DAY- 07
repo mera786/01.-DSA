@@ -1,0 +1,40 @@
+Example for understanding pass by reference as pass by value :
+---------------------------------------------------------------
+
+💡 Shortcut to Remember
+                      Java = “Pass by value of the reference” (means reference ka copy jaata hai, reference khud nahi).
+
+
+class A {
+    int val;
+}
+
+void modify(A obj) {
+    obj.val = 100;
+}
+
+public static void main(String[] args) {
+    A a = new A();
+    a.val = 50;
+    modify(a);
+    System.out.println(a.val);
+}
+
+Output: 100
+
+🧩 Explanation:
+              - Yahan bhi pass by value hi hua, par value ka matlab hai object reference ka copy.
+              - Method me obj aur a dono same object ko point karte hain.
+              - Isliye object ke andar ka data change ho gaya.
+👉 Par agar method ke andar hum reference ko reassign kar dein, to original par effect nahi hoga:
+
+void modify(A obj) {
+    obj = new A(); // new object
+    obj.val = 200;
+}
+
+A a = new A();
+a.val = 50;
+modify(a);
+System.out.println(a.val);
+ Output : 50
