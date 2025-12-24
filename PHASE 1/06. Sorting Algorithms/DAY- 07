@@ -1,0 +1,30 @@
+7. PigeonHole:
+Pigeonhole Sort is a non-comparison based sorting algorithm used when the range of input values is small and known.
+It works on the idea that each value belongs to a specific “pigeonhole”, and elements are placed into these holes based on their value.
+Basic Idea (Pigeonhole Principle) :
+     If you have n items and m pigeonholes, and each item belongs to one pigeonhole, then placing items into holes and collecting them in order results in a sorted sequence.
+Example :
+Input: [8, 3, 2, 7, 4, 6, 8]
+Range:
+   Minimum = 2
+   Maximum = 8
+Number of pigeonholes: max − min + 1 = 7
+Steps:
+    Put each element into its corresponding pigeonhole
+    Collect elements from pigeonholes in order
+Final Output: [2, 3, 4, 6, 7, 8, 8]
+⚙️ Steps to Implement Pigeonhole Sort
+    1️⃣ Find the minimum and maximum elements in the array.
+                                       - This determines the range of values.
+    2️⃣ Create pigeonholes (buckets) for each value in the range: 
+                                       - size = max − min + 1
+    3️⃣ Initialize each pigeonhole (usually as a list or count).
+    4️⃣ Place each element into its pigeonhole:
+                                       - index = value − min
+    5️⃣ Collect elements from pigeonholes in increasing order of index.
+    6️⃣ Store them back into the original array to get the sorted result.
+Time Complexity: O(n + range)
+where
+n = number of elements
+range = max − min + 1
+Space Complexity:  O(range)
