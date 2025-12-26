@@ -199,8 +199,44 @@ Iterator vs Iterable
    7. Removing elements during iteration is allowed
 
 ARRAYLIST :
- Note :- prefered core java notes for theory.             
+ Note :- prefered core java notes for theory.
+- internally use dynamic array.
+- jab hum List<Integer> likhte hai or list.add(7); krte hai to primitive kaise le leta hai to yha pe compiler automatically autoboxing krta hai like, Integer.valueOf(7);
+- list se kisi class ki object ko remove krna hai to equals method override hona jaruri ho jata hai.
+Default Capacity :
+   - Initial capacity = 10,But tab create hoti hai jab first element add hota hai. also capacity ko ArrayList ke constructor me de skte hai 20,30..etc fir uske according 
+      Capacity Growth Formula work krega : newCapacity = oldCapacity + (oldCapacity / 2)
+- Some popular methods :
+list.add(indx,element);
+list.set(indx,element);
+list.addFirst(element);
+list.addLast(element);  = list.add(element);
+list.remove(Integer.valueOf(7));
+- Time complexity :
+add(e) -> O(1)  [ but depends on capacity qunki ek bar bhar gya to purana v copy hoga or new add hoga]
+set(i, e) -> O(1)  [ we can set using index ]
+get(i) -> O(1)  [ we can get using index ]
+remove(i) -> O(n)  [ shift is needed ]
+remove (o) -> O(n)  [ serach + shift is needed ]
+add (i, e ) -> O(n) [ shift is needed ]
 
+
+LINKEDLIST :
+ Note :- prefered core java notes for theory.
+- internally use doubly linkedlist.
+Default Capacity :
+   there is no case of default capacity, an empty list is created when a linkedlist is initialize.
+- Time complexity :
+add(e) -> O(1)     [ tail is maintained ]
+set(i, e) -> O(n)  [ iterate + update ]
+get(i) -> O(n)     [ iterate ]
+remove(i) -> O(n)  [ iterate ]
+remove(o) -> O(n)  [ iterate ]
+add(i, e) -> O(n)  [ iterate ]
+
+
+Collections : 
+- ye ek class hai jiske pass utility methods hai. jaise Collections.sort() methods..etc.
 
 
 custom designing arraylist :
@@ -261,3 +297,34 @@ public class MyArrayList<T> {
         return size;
     }
 }
+
+
+Set Data Structure :
+-> set always store unique elements , for uniqueness how set identify : so it takes help of equals method to compare objects.
+Time Complexity of Set :
+                                  HashSet                           linkedHashset                              TreeSet 
+add(e)                            O(1)                               O(1)                                       O(log n)
+remove(e)                         O(1)                               O(1)                                       O(log n)
+contains(e)                       O(1)                               O(1)                                       O(log n)
+
+
+Map Data Structure :
+- it store elements in key value pair, where key is always unique.
+comman popular methods :
+put(key, value );
+map.entrySet(); // return type  Map.Entry<Integer,String>
+entry.getKey();
+entry.getValue();
+map.keySet();
+map.getKey(key);
+map.values();
+map.containsKey(key);
+map.containsValue("sam");
+map.getOrDefault(key, depends-value as map declare if key not present);
+Time Complexity of Map :
+                                  HashMap                           linkedHashMap                               TreeMap 
+put(k,v)                          O(1)                               O(1)                                       O(log n)
+get(k)                            O(1)                               O(1)                                       O(log n)
+remove(k)                         O(1)                               O(1)                                       O(log n)
+containsKey(k)                    O(1)                               O(1)                                       O(log n)
+
