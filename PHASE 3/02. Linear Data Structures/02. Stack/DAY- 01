@@ -2,6 +2,12 @@ Q1. What is a Stack?
 A stack is a linear data structure that follows the Last In First Out (LIFO) principle. It means the last element that was added to the stack will be the first one to be removed. 
 Imagine a stack of books; the last book that was added to the pile will be the first book to be removed. Similarly, in a stack data structure, 
 the last element added will be the first one to be removed.
+- Java Stack internally Vector ko use karta hai, isliye ye synchronized aur legacy class hai. means indirectly dynamic array use krti hai.
+- Stack ki default capacity = 10, Capacity Growth : newCapacity = oldCapacity * 2
+- Time complexity :
+ push(e)  -> O(1)  [ but it depends on capacity ]
+ pop()    -> O(1)  [ using top ]
+ peek()   -> O(1)  [ using top ]
 
 
 Q2. Stack Operations :
