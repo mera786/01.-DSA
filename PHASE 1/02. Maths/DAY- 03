@@ -1,5 +1,7 @@
+                                                                                BIT MANIPULATION
+
 ******** NUMBER REPRESENTATION ********
- 1. Decimal number representation:
+ 1. Decimal number representation: 
          (432)₁₀  =  4×10^2+3×10^1+2×10^0  => 400+30+2 => 432
  2. Binary Number representation :
           (1011)₂  =  (1×2^3)+(0×2^2)+(1×2^1)+(1×2^0)  => 8 + 2 + 1  => 11
@@ -55,6 +57,13 @@ Example:
 | ------------------- | ------------------------------------------------- | ----------------------------------------------- | --------------------- | ---------------------- |
 | **Unsigned Number** | ❌ No sign (only positive values)                  | MSB is just another value bit                   | [0, ((2ⁿ) − 1)]         | 0 to 15 (0000 to 1111) |
 | **Signed Number**   | ✅ MSB shows the sign (0 = positive, 1 = negative) | MSB denotes sign, remaining bits show magnitude | [−(2ⁿ⁻¹ - 1), (2ⁿ⁻¹ − 1)] | −7 to +7           |
+
+
+🧩 Set bit & Unset bit :
+| Bit Value | Kya kehte hain            
+| --------- | ------------------------- 
+| `1`       | **Set bit khte hai**      
+| `0`       | **Unset bit / Clear bit khte hai** 
 
 
 Q2. 🧠 Bit Addition (Binary Addition) ?
