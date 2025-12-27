@@ -1,16 +1,7 @@
-(1) Count the Digits of a number lets say number is : 4567 ?
-Steps to solve :
-           - Take a number → say num = 4567
-           - Initialize a counter → count = 0
-           - Repeat while num > 0:
-                    - Remove the last digit using num = num / 10
-                    - Increase the counter → count++
-           - When the loop finishes, count will have the total number of digits.
+                                                                               MATHS - 2 
 
-(2) Digit Count using Logarithm ?
-int v = (int) Math.floor(Math.log10(num))+1;
 
-(3) Check if a Number is armstrong or not. ?
+(1) Check if a Number is armstrong or not. ?
 👉 Short Definition:
 A number is called an Armstrong number if the sum of each of its digits raised to the power of total digits equals the number itself.
 Example: Let’s take 153
@@ -36,7 +27,7 @@ Step-by-Step Logic to Check Armstrong Number :
                                                                  - Else → ❌ Not Armstrong
 
 
-(4) check if a number is palindrome ?
+(2) check if a number is palindrome ?
 👉 Short Definition:
 A palindrome number is a number that remains the same when its digits are reversed.
 Example :
@@ -68,7 +59,7 @@ Step 5️⃣
             ❌ Not Palindrome
 
 
-Q5. print all divisors of a number ?
+Q3. print all divisors of a number ?
 A divisor of a number n is any number that divides n completely (without leaving a remainder).
 Example:
 6 → divisors: 1, 2, 3, 6
@@ -84,7 +75,7 @@ Step 2️⃣
    - check divisor like if(num % i ==0 ) then print i and other num like num/i also print if (i != num/i) sop(num/i).
 
 
-Q6. Check if a Number is prime or not ?
+Q4. Check if a Number is prime or not ?
 A prime number is a number greater than 1 that has exactly two divisors: 1 and itself.
 Properties of Prime Numbers:
    - Greater than 1:
@@ -120,7 +111,7 @@ After the loop, check the flag:
        - isPrime == false → ❌ Not Prime
 
 
-Q7. 🧮 Sieve of Eratosthenes (ए-रा-टॉस-थ-नीज़) FOR 'PRIME' NUMBER?
+Q5. 🧮 Sieve of Eratosthenes (ए-रा-टॉस-थ-नीज़) FOR 'PRIME' NUMBER?
 The Sieve of Eratosthenes is an easy and fast method to find all prime numbers up to a given number n. Instead of checking each number one by one, 
 we cross out (remove) all multiples of each prime number.
 Example:  Find all prime numbers up to 30.
@@ -147,7 +138,7 @@ Step 5️⃣
       After the loop ends, all indexes that are still true in the array are prime numbers. for that use loop from i=2; i<=num;
 
 
-Q8. HCF / GCD — Highest Common Factor / Greatest Common Divisor ?
+Q6. HCF / GCD — Highest Common Factor / Greatest Common Divisor ?
 Defination :
 - HCF or GCD means the largest same divisor of two or more numbers.that means no remainder is left.
 💡 Example:  For numbers 12 and 18:
@@ -168,7 +159,7 @@ STEP-3:
 - check both num1 % i == 0 && num2 % i ==0 if yes then update ans=i;
 
 
-Q9. 🧮 Euclidean (यूक-ली-डियन) Algorithm For FINDING 'GCD' ?
+Q7. 🧮 Euclidean (यूक-ली-डियन) Algorithm For FINDING 'GCD' ?
 The Euclidean Algorithm is an easy way to find the GCD (Greatest Common Divisor) of two numbers.
     - Subtract or divide the smaller number from the bigger number again and again.
     - if any number num1 or num2 becomes 0 then other number is GCD. 
@@ -209,7 +200,7 @@ Find GCD of 60 and 48
 2️⃣ 48 ÷ 12 → remainder 0
 ✅ GCD = 12
 
-Q10. LCM / Least Common Multiple (or Smallest Common Multiple)
+Q8. LCM / Least Common Multiple (or Smallest Common Multiple)
 Easy Definition:
   - 👉 Matlab do (4,6) ya zyada numbers(4,6,9..) ke aise sabse chhote number (36) ko LCM bolte hain jo sabhi numbers (4,6,9) se completely divide (exactly divide) ho jaye.
 💡 Example:  For numbers 4 and 6:
@@ -232,54 +223,27 @@ Now check the relationship:
 👉 12 × 18 = 216 ✅
 
 
-Q11. Lcm of two numbers if you already know GCD of two numbers ?
+Q9. Lcm of two numbers if you already know GCD of two numbers ?
 Formula :
 if a and b are two numbers, then lcm =n1 * n2 / gcd.
 
 
-Q12. 🧮 What is Modular Arithmetic?
-Modular Arithmetic is math with remainders.
-When we divide a number by another number, the remainder is the result in modular arithmetic.
-We write it as:
-👉 a mod m → means remainder when a is divided by m
-🔹 Example:
-10 mod 3 = 1
-(because 10 ÷ 3 = 3 remainder 1)
-15 mod 5 = 0
-(because 15 ÷ 5 = 3 remainder 0)
-🧩 Some Useful Rules (in easy words) :
-| Rule                                          | Meaning (in simple words)                                                              |
-| --------------------------------------------- | -------------------------------------------------------------------------------------- |
-| (a + b) mod m = ((a mod m) + (b mod m)) mod m | You can take remainders first, then add                                                | Note:- modulo limit will be given like,1000 (10^3)
-| (a − b) mod m = ((a mod m) − (b mod m)) mod m | You can take remainders first, then subtract                                           |
-| (a × b) mod m = ((a mod m) × (b mod m)) mod m | You can take remainders first, then multiply                                           |
-| (a % m) % m = a % m                           | Taking mod twice doesn’t change the answer                                             |
-| m % m = 0 ✅                                   | Any number divided by itself gives remainder 0 (your note had 1, but correct is **0**) |
-
-Note:- 🧠 Modular Multiplicative Inverse :
-The modular inverse of a number a is another number a⁻¹ such that:
-                                                          (a×a^−1)modm=1
-That means —
-when you multiply a and its inverse, and take the remainder with m,
-you get 1.
-🔹 Example:
-Let’s find the modular inverse of 3 mod 11.
-We need a number x such that
-(3 × x) mod 11 = 1
-Try values of x:
-3×4 = 12 → 12 mod 11 = 1 ✅
-So the modular inverse of 3 mod 11 is 4
-
-Q. Follow up Question :
-without modular arithmatic ?
-current time = 10 hrs
-add = 5 hours
-here you will find 15 but in clock 15 does not exist
-so apply modular arithmatic where limit is 12 hrs.
+Q10. print all unique prime factors of a number ?
+Prime factor : Jo prime number ho Aur jo given number ko completely divide kare.
+Example: 
+Number = 60  [60 = 2 × 2 × 3 × 5 ] but Unique prime factors:  2 3 5.
+Steps :
+  - Initialize an empty list
+  - Iterate from i = 2 to √num
+  - If num is divisible by i:
+  - Add i to the list
+  - Divide num by i repeatedly until not divisible
+  - After loop, if num > 1, add it to list
+  - Print the list
 
 
 
-Q12. Factorial of a Number ?
+Q11. Factorial of a Number ?
   - Factorial means multiplying a number by all the whole numbers less than it down to 1.
   - It is shown using a “!” (exclamation mark).
 💡 Example:
@@ -300,73 +264,73 @@ So, 5!=5×24=120✅
 1! = 1
 0! = 1 (by definition — special mathematical rule)
 
-                                                                                 ___________________________________________START_________________________________________________
-Q13. Find trailing zeros in a factorial ?             
-             
-suppose you are given a number '456700442000' can you calculate the number of zeros in it? Yes, you can easily, 
-simply use the extraction and reduction method to extract the digits from the end and check if it is a non zero number.
-   1. if it is 0, add the count.
-   2. if it is non zero, break the loop.
-count is your answer, simple!
-But when you are asked to find trailing zeros from factorial of a number. There is a high chance that this number might exceed 
-the range of Integer/long and you can't store it! So, if you can't store it, how will you find it's trailing zeros? let's understand, 
-what brings zero at the end of a number!
-   1. Suppose the number is '68' lets find its factors-> 68 = 2*2*17
-   2. Suppose the number is '70' lets find its factors-> 70 = 2*5*7
-   3. Suppose the number is '680' 680 = 2*2*2*5*17
-   4. Suppose the number is '6800' 6800 = 2*2*2*2*5*5*17
-did you observe anything?
-yes,
-68 has zero pairs of 2 and 5. 
-70 has one pair of 2 and 5.
-680 has one pair of 2 and 5. 
-6800 has two pair of 2 and 5.
-Bs ho gya question solve! find all the pairs of 2 and 5.
-But but but... lets come back to factorial.
-!3 = 321 !7 = 7654321 (1 pair of 5,2) !12 = 12111098765432*1 (2 pair of 5,2)
-Observations->
-We can see that 2 will be there for every number greater than 1. (obviously) so be smart and calculate only 5's because 
-count of '2s' will always be greater than equal to count of '5s'.
-5 repeats in interval of 5. ex -> 5, 10, 15, and so on
-Therefore, floor of (N/5) will give the correct answer! But wait what about squares, cubes and so on? Like..
-'5' has one '5'
-'10' has one '5' (5*2)
-'15' has one '5'
-'20' has one '5'
-'25' has two '5' (5*5, square) ....
-'125' has three '5' (555, cube).
-conclusion->
-To handle the special condition we can say.
-for square case-> N/25 + N/5
-for cube case-> N/125 + N/25 + N/5
-and so on...
-Example -> !30 = 302928..2524*..20...1514*..109*..5*4..*1 (7 pairs of 5,2)
 
-Since 30 is greater than 25, -> 30 / 5 + 30 / 25 -> floor (6) + floor(1.2) -> 6 + 1 -> 7
-
+Q172. LeetCode :  Find trailing zeros in factorial of a number ?
+Example :
+   1. Suppose the number is '3' lets find its factors-> 3! = 3*2*1 = 6          [0]
+   2. Suppose the number is '5' lets find its factors-> 5! = 5*4*3*2*1 = 120    [1]
+   3. Suppose the number is '10' lets find its factors-> 10! = 10*9*8*7*6*5*4*3*2*1 = 3628800  [2]
 STEPS:
- 1. doubl res = 0;
- 2. for(int i = 5; i<=num; i= i * i){ res = res+Math.floor(num/i)}
+ 1. int res = 0;
+ 2. int i = 5; while(i<=num){ res= res + num/i; i=i*5;} return res;
  3. return res;
 
-Q14. Write code for Fibonacci series using normal logic and recursion?
+
+
+Q13. 🧮 What is Modular Arithmetic?
+Modular Arithmetic is math with remainders.
+When we divide a number by another number, the remainder is the result in modular arithmetic.
+We write it as:
+👉 a mod m → means remainder when a is divided by m
+🔹 Example:
+10 mod 3 = 1
+(because 10 ÷ 3 = 3 remainder 1)
+15 mod 5 = 0
+(because 15 ÷ 5 = 3 remainder 0)
+🧩 Some Useful Rules (in easy words) :
+(a + b) % m   = (a % m + b % m) % m
+
+(a * b) % m   = (a % m * b % m) % m
+
+(a - b) % m   = ((a % m - b % m)+m) % m
+
+a % m = (a % m + m) % m   => handles neg
+Note:- modulo limit will be given like,1000 (10^3)
+
+
+
+Q14. Follow up Question :
+without modular arithmatic ?
+current time = 10 hrs
+add = 5 hours
+here you will find 15 but in clock 15 does not exist
+so apply modular arithmatic where limit is 12 hrs.
+
+
+Q15. follow-up quez : given an array use one for loop and print this array 4 times.
+arr = {8,9,1,3,2};
+Note:- use modular arithmatic on index .
+
+
+                                                       
+Q16. Write code for Fibonacci series using normal logic and recursion?
 Fibonacci series is a sequence where each number is the sum of the two numbers before it, starting from 0 and 1.
 Input: 
 int num = 15;
 output: 0 1 1 2 3 5 8 13.
 Note:- Fibonacci series is a sequence where each number is the sum of the previous two numbers.
 
-Q15. write code for first multiple of 5 and 7 ?
+Q17. write code for first multiple of 5 and 7 ?
 Input :
 int num1=1;
 Output: 35
 
-Q16. find sum of first n natural number ?
+Q18. find sum of first n natural number ?
 Input: 
 int num=3; 
 Output: 6
 Note: The sum of the first n natural numbers means adding all numbers from 1 to n.
 
-Q17. calculate sum of integers until invalid input given    invalid input: -1? 
+Q19. calculate sum of integers until invalid input given    invalid input: -1? 
 
   
